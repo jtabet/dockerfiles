@@ -1,7 +1,7 @@
 FROM php:7.1-fpm
 MAINTAINER Jérémie Tabet <dev@jeremie.tabet.rocks>
 
-RUN apt-get update && apt-get install -y zlib1g-dev libicu-dev g++ libssl-dev apt-transport-https
+RUN apt-get update && apt-get install -y zlib1g-dev libicu-dev g++ libssl-dev apt-transport-https gnupg
 
 # Add Microsoft repo for Microsoft ODBC Driver 13 for Linux
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
