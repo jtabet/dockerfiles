@@ -13,9 +13,9 @@ RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
-        libpng12-dev \
+        libpng-dev \
         libicu-dev \
-        libicu52  \
+        libicu55  \
     && docker-php-ext-install iconv \
     && docker-php-ext-install exif \
     && docker-php-ext-install mbstring \
