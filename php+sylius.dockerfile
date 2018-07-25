@@ -15,8 +15,10 @@ RUN apt-get update && apt-get install -y \
         libmcrypt-dev \
         libpng-dev \
         libicu-dev \
-        libicu55  \
-    && docker-php-ext-install iconv \
+
+RUN wget http://mirrors.kernel.org/ubuntu/pool/main/i/icu/libicu52_52.1-3ubuntu0.8_amd64.deb && dpkg -i libicu52*.deb
+
+RUN docker-php-ext-install iconv \
     && docker-php-ext-install exif \
     && docker-php-ext-install mbstring \
     && docker-php-ext-install pdo_mysql \
